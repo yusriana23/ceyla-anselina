@@ -1,0 +1,606 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #20254d 0%,
+            #10142f 40%,
+            #050714 75%,
+            #02030a 100%
+        );
+}
+
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   BINTANG
+========================================== */
+
+.star {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    opacity: 0.4;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+
+/* Posisi bintang */
+
+.star-1 {
+    top: 10%;
+    left: 12%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 20%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    top: 35%;
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    top: 50%;
+    left: 90%;
+    animation-delay: 0.5s;
+}
+
+.star-5 {
+    top: 65%;
+    left: 15%;
+    animation-delay: 1.5s;
+}
+
+.star-6 {
+    top: 75%;
+    left: 75%;
+    animation-delay: 2.5s;
+}
+
+.star-7 {
+    top: 85%;
+    left: 35%;
+    animation-delay: 1s;
+}
+
+.star-8 {
+    top: 15%;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.star-9 {
+    top: 45%;
+    left: 60%;
+    animation-delay: 0.8s;
+}
+
+.star-10 {
+    top: 90%;
+    left: 90%;
+    animation-delay: 1.8s;
+}
+
+
+/* Animasi bintang */
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.8);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        40px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ==========================================
+   ICON SURAT
+========================================== */
+
+.icon {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.15
+        );
+
+    color: #eeeeee;
+
+    font-size: 40px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+/* Animasi icon */
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+/* ==========================================
+   JUDUL
+========================================== */
+
+h1 {
+    font-size:
+        clamp(
+            36px,
+            8vw,
+            65px
+        );
+
+    font-weight: 700;
+
+    text-align: center;
+
+    letter-spacing: -1px;
+
+    color: #f5f5f5;
+
+    text-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle {
+    margin-top: 12px;
+
+    max-width: 500px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    color: #bfc3d4;
+}
+
+
+/* ==========================================
+   BUTTON UTAMA
+========================================== */
+
+.main-button,
+.forgive-button {
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    padding:
+        14px 28px;
+
+    border-radius: 30px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f5d95,
+            #6f7db5
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Jarak tombol */
+
+.main-button {
+    margin-top: 28px;
+}
+
+
+/* Hover */
+
+.main-button:hover,
+.forgive-button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* Saat ditekan */
+
+.main-button:active,
+.forgive-button:active {
+    transform:
+        scale(0.96);
+}
+
+
+/* ==========================================
+   KARTU PESAN
+========================================== */
+
+.message {
+    width:
+        min(
+            600px,
+            95vw
+        );
+
+    margin-top: 30px;
+
+    padding:
+        35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(
+            0,
+            0,
+            0,
+            0.45
+        );
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(35px)
+        scale(0.95);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+/* Pesan aktif */
+
+.message.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ==========================================
+   JUDUL PESAN
+========================================== */
+
+.message h2 {
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    color: #eeeeee;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   PARAGRAF PESAN
+========================================== */
+
+.message p {
+    margin-bottom: 17px;
+
+    color: #d5d8e3;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Paragraf terakhir */
+
+.message .last {
+    margin-top: 25px;
+
+    color: #f0f0f0;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   BUTTON MAAFKAN
+========================================== */
+
+.forgive-button {
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   RESPONSE
+========================================== */
+
+.response {
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    color: #d9dce8 !important;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding:
+            30px 15px;
+    }
+
+
+    .icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 32px;
+
+        margin-bottom: 18px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+
+        max-width: 320px;
+    }
+
+
+    .message {
+        width: 100%;
+
+        padding:
+            25px 20px;
+
+        border-radius: 20px;
+
+        margin-top: 25px;
+    }
+
+
+    .message h2 {
+        font-size: 24px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .message p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .main-button,
+    .forgive-button {
+        padding:
+            13px 22px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   HP SANGAT KECIL
+========================================== */
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+
+    .message {
+        padding:
+            22px 16px;
+    }
+
+
+    .message p {
+        font-size: 13px;
+    }
+}
